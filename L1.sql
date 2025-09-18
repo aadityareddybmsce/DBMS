@@ -1,0 +1,19 @@
+show databases;
+create database IF NOT exists newdatabase;
+show databases;
+use newdatabase;
+create table STUDENT(
+stdid INT(10), stdname varchar(20), dob date, doj date, fee INT(5), gender char
+);
+DESC STUDENT;
+INSERT INTO STUDENT_INFO(stdid,stdname,dob,doj,fee)
+VALUES(1,'AADITYA','2005-10-11','2025-09-18',11000);
+INSERT INTO STUDENT_INFO(stdid,stdname,dob,doj,fee)
+VALUES(2,'PADAMSHRI','2006-10-20','2025-03-28',19000);
+ALTER TABLE STUDENT ADD PHONE_NO INT(10);
+ALTER TABLE STUDENT 
+RENAME COLUMN PHONE_NO TO STUDEN_NO;
+ALTER TABLE STUDENT RENAME TO STUDENT_INFO;
+SELECT * FROM STUDENT_INFO;
+ALTER TABLE STUDENT_INFO DROP COLUMN gender;
+DELETE FROM STUDENT_INFO WHERE STDID=2;
